@@ -341,18 +341,28 @@
  </body>
 </html>
 
-<script type="text/javascript">
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-            window.voiceflow.chat.load({
-                verify: { projectID: '67aaeb3ec1f7f579513cb4d7' },
-                url: 'https://general-runtime.voiceflow.com',
-                versionID: 'production'
-            });
-        }
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
-        v.type = "text/javascript"; 
-        s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-</script>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  location="asia-south1"
+  project-id="decoded-badge-429108-n5"
+  agent-id="06cd23e9-5cf9-4b89-8ca6-b9914436f469"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="I&#x27;m Here to help">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #777777;
+    --df-messenger-font-family: Lato;
+    --df-messenger-chat-background: #C6DAFC;
+    --df-messenger-message-user-background: #C8E6C9;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
